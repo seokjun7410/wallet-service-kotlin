@@ -1,4 +1,4 @@
-  server:
+server:
   port: 8081
 
 spring:
@@ -31,7 +31,7 @@ spring:
               protocol: SASL_SSL
             sasl:
               jaas:
-                config: org.apache.kafka.common.security.plain.PlainLoginModule required username='2VLYZNOZZXP77H2Q' password='5icwWkLVF9uRMPX73ren9J75XETdw2lqloqEqk3Ih9ue/TBF3HPVypHqBRWUzy7K';
+                config: org.apache.kafka.common.security.plain.PlainLoginModule required username='${KAFKA_API_KEY}' password='${KAFKA_SECRET_KEY}';
               mechanism: PLAIN
             client:
               dns:
